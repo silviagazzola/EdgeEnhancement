@@ -4,6 +4,8 @@
 % An Inner-Outer Iterative Method for Edge Preservation in Image Restoration and Reconstruction
 % arXiv, math.NA 1912.13103, 2019
 
+% To generate the test problem, functions form AIR Tools II ( jakobsj/AIRToolsII ) are needed.
+
 % Silvia Gazzola, University of Bath, June 2020
 
 clear, clc, close all
