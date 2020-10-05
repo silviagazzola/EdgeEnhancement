@@ -825,4 +825,12 @@ origin = [x3 P(elmts(I),2)];
 dists = (origin(1)-P(:,1)).^2+(origin(2)-P(:,2)).^2;
 [~,corner] = min(dists);
 
+function discrval = discrfcn(l, A, RegM, b, nrmb, nnoise)
 
+n = size(A,2);
+if n == 1
+    discrval = 0;
+else
+    xl = [A; l*RegM]\[b; zeros(size(RegM,1),1)];
+    discrval = (norm(A*xl -b)/nrmb)^2 - nnoise^2;
+end
